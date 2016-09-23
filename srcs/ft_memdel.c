@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:20:23 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/23 12:28:26 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/23 12:32:36 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 #include "libft.h"
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
 	free(*ap);
 	*ap = NULL;
