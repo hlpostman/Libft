@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 09:56:44 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/23 12:31:40 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/23 14:47:11 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	temp_buffer = (unsigned char *)malloc(len);
 	ft_memcpy(temp_buffer, src, len);
 	ft_memcpy(dst, temp_buffer, len);
+	free(temp_buffer);
 	return (dst);
 }
