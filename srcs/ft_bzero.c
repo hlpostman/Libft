@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 15:22:46 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/22 15:56:15 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/23 12:36:08 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n != (size_t)0)
+	unsigned char	*buffer;
+	size_t			i;
+
+	i = 0;
+	while (i < n)
 	{
-		unsigned char	*buffer;
-		while (n)
-		{
-			*buffer = 0;
-			buffer++;
-			n--;
-		}
+		buffer[i] = 0;
+		i++;
 	}
 }
