@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 18:17:24 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/22 19:46:34 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/22 19:48:30 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char		*buffer;
 	const unsigned char	*source;
 	size_t				i;
-	void				*ptr;
 
 	buffer = (unsigned char *)dst;
 	source = (const unsigned char *)src;
