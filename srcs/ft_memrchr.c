@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 11:28:18 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/23 11:45:08 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/23 15:10:18 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void	*ft_memrchr(const void *s, int c, size_t n)
 		i--;
 	}
 	if (buffer[0] == (unsigned char)c)
-		return (buffer);
+		return ((void *)buffer);
 	return (NULL);
 }
