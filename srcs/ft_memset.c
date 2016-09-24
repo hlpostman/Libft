@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 13:15:13 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/22 18:14:25 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/24 04:58:18 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	*ft_memset(void *b, int c, size_t n)
 		buffer[i] = (unsigned char)c;
 		i++;
 	}
-	return (buffer);
+	return ((void *)buffer);
 }
