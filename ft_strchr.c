@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 14:27:38 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 14:37:48 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/24 14:53:25 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@
 ** Side effect: none
 ** Result: pointer to the first occurrence of "c" in the memory area holding
 ** s and the nul terminator of s - so if '\0' is c, a pointer to the nul byte
-** of s will be returned.
+** of s will be returned. In the case the "c" does not occur in the search
+** area, NULL is returned (ft_memchr returns NULL if c is not found in the
+** search area, so the single return call acounts for the two cases.  The NULL
+** returned by this function does get cast to (char *) but that does not
+** change the macro).
 */
 
 #include "libft.h"
