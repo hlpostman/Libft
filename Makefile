@@ -6,13 +6,13 @@
 #    By: hpostman <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 13:57:33 by hpostman          #+#    #+#              #
-#    Updated: 2016/09/24 05:32:17 by hpostman         ###   ########.fr        #
+#    Updated: 2016/09/24 06:56:01 by hpostman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 MEMORY_FUNCTIONS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
-				   ft_memcmp.o ft_memalloc.o ft_memdel.o
+				   ft_memchr.o ft_memrchr.o ft_memcmp.o ft_memalloc.o ft_memdel.o
 STRING_FUNCTIONS = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcat.o \
 				   ft_strncat.o ft_strlcat ft_strchr.o ft_strrchr.o ft_strstr.o \
 				   ft_strnstr.o ft_strcmp.o ft_strncmp.o ft_atoi ft_isalpha.o \
