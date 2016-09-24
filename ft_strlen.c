@@ -6,13 +6,13 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 07:19:07 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 07:28:41 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/24 08:00:44 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Re-coding of the Standard C Library function strlen().
-** Parameters: string
+** Parameters: const string
 ** Side effects: none
 ** Return value: size_t number representing number of characters in the
 ** string passed as the argument
@@ -20,7 +20,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
