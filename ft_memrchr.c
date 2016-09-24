@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 11:28:18 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/23 15:10:18 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/24 06:35:03 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	*ft_memrchr(const void *s, int c, size_t n)
 	unsigned char	*buffer;
 	size_t			i;
 
+	buffer = (unsigned char *)s;
 	i = (n - 1);
 	while (i > 0)
 	{
