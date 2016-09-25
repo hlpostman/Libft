@@ -6,13 +6,13 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 12:54:59 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 13:25:57 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/25 13:32:13 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Coding of the non-standard function strequ().
-** Parameters: two strings
+** Parameters: two const strings
 ** Side effect: none
 ** Return value: 1 if the two strings are the same, 0 if not (same meaning
 ** what is held at a given index is the same in each string - not that the
