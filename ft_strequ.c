@@ -6,12 +6,12 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 12:54:59 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 13:08:58 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/25 13:25:57 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Coding of the non-standard function strqu().
+** Coding of the non-standard function strequ().
 ** Parameters: two strings
 ** Side effect: none
 ** Return value: 1 if the two strings are the same, 0 if not (same meaning
@@ -30,7 +30,7 @@
 
 #include "libft.h"
 
-int	ft_strqu(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	if (ft_strcmp(s1, s2) == 0)
 		return (1);
