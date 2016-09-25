@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 09:47:28 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 10:04:51 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/25 11:50:13 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 ** in for s - i.e. I don't use "s++" but rather "s + i", where i is a new
 ** variable.  That way after calling ft_striter, a program can still expect
 ** s to point to the head of s rather than the tail.
+** ** sounds like since s is a copy when it's passed, "s++" might not modify
+** s anyway**
 ** Return value: none
 */
 
