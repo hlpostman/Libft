@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 13:18:55 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 14:22:03 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/26 13:02:22 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,21 +34,34 @@
 
 #include "libft.h"
 
+size_t	ft_min(size_t a, size_t b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+size_t	ft_max(size_t a, size_t b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	i;
-	char	*end_of_dst;
+	char	*result;
+	size_t	append_len;
+	size_t	length_attempted;
 
-	dst_len = ft_strlen(dst);
-	end_of_dst = dst + (sizeof(char) * dst_len);
-	dst = ft_strcpy(end_of_dst, src);
-	i = 0;
-	while (i < size)
+//	length_attempted = ft_strlen((const char *)dst) + ft_strlen(src)1;
+	length_attempted = ft_strlen(src) + ft_min(ft_strlen((const char *)dst), size);
+	append_len = ft_max(size - ft_strlen((const char *)dst) - 1, ft_strlen(src));
+	if (size >= length_attempted)
+//	if (size - ft_strlen(dst) - 1 > 0)
 	{
-		if (dst[i] == '\0')
-			return (ft_strlen(dst));
-		i++;
+		result = ft_strncat(dst, src, append_len);
+		length_attempted = ft_strlen(result);
 	}
-	return (size);
+		return (length_attempted);
 }
