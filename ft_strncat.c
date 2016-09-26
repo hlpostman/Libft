@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 09:44:25 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 10:07:44 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/26 07:11:58 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_strncat(char *dst, const char *src, size_t n)
 
 	dst_len = ft_strlen(dst);
 	end_of_dst = dst + (sizeof(char) * dst_len);
-	dst = (char *)ft_memcpy(dst, src, n + 1);
-	return (dst);
+	dst = (char *)ft_memcpy(dst + dst_len, src, n);
+	return (dst - dst_len);
 }
