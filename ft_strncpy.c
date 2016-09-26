@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 08:24:58 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/26 06:40:23 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/26 13:04:32 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-
 	size_t	i;
 
 	i = 0;
