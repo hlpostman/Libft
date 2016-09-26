@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 07:29:48 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 14:05:04 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/26 06:20:26 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 
 	len = ft_strlen(s);
-	s_duplicate = (char *)ft_memalloc(sizeof(size_t) * (len + 1));
+	s_duplicate = (char *)ft_memalloc(sizeof(char) * (len + 1));
 	if (s_duplicate == NULL)
 		return (NULL);
 	s_duplicate = (char *)ft_memcpy(s_duplicate, s, len);
