@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 09:08:17 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/26 07:04:27 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/26 07:34:03 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_strcat(char *dst, const char *src)
 
 	dst_len = ft_strlen(dst);
 	end_of_dst = dst + (sizeof(char) * dst_len);
-	dst = ft_strcpy(end_of_dst, src);
-	return (dst - dst_len);
+	ft_strcpy(end_of_dst, src);
+	return (dst);
 }
