@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 08:24:58 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 08:54:55 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/26 06:40:23 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,19 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	ft_bzero(dst, n);
-	dst = (char *)ft_memcpy(dst, src, n);
+
+	size_t	i;
+
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
 	return (dst);
 }
