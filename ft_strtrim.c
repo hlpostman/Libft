@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 14:43:32 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 15:43:08 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/27 07:59:48 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 ** preceding or following s - but note the return will be a new copy, not s
 ** itself) OR, if the memory allocation failed, NULL.
 ** In this instance, "whitespace" or characters to be trimmed are: ' ' (space),
-** ',' (comma - idk why, but it says to trim it), '\n', and '\t'. These are
-** defined in a macro in the header file libft.h.
+** '\n', and '\t'. These are defined in a macro in the header file libft.h.
 */
 
 #include "libft.h"
