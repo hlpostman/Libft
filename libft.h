@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 15:26:17 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/27 08:00:18 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # define IS_WHITESPACE(c) c == ' ' || c == '\n' || c == '\t'
-# define TRIM(c) c == ' ' || c == ',' || c == '\n' || c == '\t'
+# define TRIM(c) c == ' ' || c == '\n' || c == '\t'
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
