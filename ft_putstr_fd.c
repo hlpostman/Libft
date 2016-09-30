@@ -6,15 +6,15 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 16:21:50 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/30 16:26:45 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/30 16:33:14 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Coding of non-standard function putstr_fd()l
 ** Parameters: const string, integer that is a valid file descriptor
-** Side effect: writes the string passed as an argument to the file descriptor
-** note that if the argument passed for the file descriptor is invalid, the
+** Side effect: writes the string passed as an argument to the file descriptor.
+** Note that if the argument passed for the file descriptor is invalid, the
 ** program crashes - write(2) fails, and this function has no error handling.
 ** Return value: none
 */
