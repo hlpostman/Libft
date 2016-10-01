@@ -6,12 +6,15 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 19:47:33 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/30 20:30:01 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/09/30 20:35:53 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-**
+** Coding of nonstandard function lstmap().
+** Parameters:
+** Side effect:
+** Return value:
 */
 
 #include "libft.h"
