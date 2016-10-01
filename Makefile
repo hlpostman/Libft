@@ -6,35 +6,65 @@
 #    By: hpostman <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 13:57:33 by hpostman          #+#    #+#              #
-#    Updated: 2016/09/24 06:56:01 by hpostman         ###   ########.fr        #
+#    Updated: 2016/09/30 16:12:37 by hpostman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-MEMORY_FUNCTIONS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
-				   ft_memchr.o ft_memrchr.o ft_memcmp.o ft_memalloc.o ft_memdel.o
-STRING_FUNCTIONS = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcat.o \
-				   ft_strncat.o ft_strlcat ft_strchr.o ft_strrchr.o ft_strstr.o \
-				   ft_strnstr.o ft_strcmp.o ft_strncmp.o ft_atoi ft_isalpha.o \
-				   ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper \
-				   ft_tolower.o ft_strnew.o ft_strdel.o ft_strclr.o ft_striter \
-				   ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o ft_strnequ \
-				   ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa
-STREAM_FUNCTIONS = ft_putchar.o ft_pustr.o ft_putendl.o ft_putnbr.o ft_putchar_fd \
-				   ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd
-LIST_FUNCTIONS = ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter \
-				 ft_lstmap
-OBJECTS = $(MEMORY_FUNCTIONS)
+
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+SRC =	ft_atoi.c \
+		ft_bzero.c \
+		ft_mem{alloc,ccpy,rchr,chr,cmp,cpy,del,move,set}.c \
+		ft_strcat.c \
+		ft_strchr.c \
+		ft_strclr.c \
+		ft_strcmp.c \
+		ft_strcpy.c \
+		ft_strdel.c \
+		ft_strdup.c \
+		ft_strequ.c \
+		ft_is{alpha,print,alnum,ascii,digit}.c \
+		ft_str{iter,iteri}.c \
+		ft_strjoin.c \
+		ft_strlcat.c \
+		ft_strlen.c \
+		ft_str{map,mapi}.c \
+		ft_strncat.c \
+		ft_strncmp.c \
+		ft_strncpy.c \
+		ft_strnequ.c \
+		ft_strnew.c \
+		ft_strnstr.c \
+		ft_strrchr.c \
+		ft_strstr.c \
+		ft_strsub.c \
+		ft_strtrim.c \
+		ft_to{lower,upper}.c \
+		ft_strsplit.c \
+		ft_itoa.c
+		ft_put{char,str,endl,nbr}
+		ft_put{char,str,endl,nbr}_fd
+
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar rc $(NAME) $(OBJECTS)
-	ranlib $(NAME)
-%.o: %.c
-	gcc -Wall -Werror -Wextra -c -o $@ $<
+$(NAME):
+	@$(CC) $(CFLAGS) -c $? $(SRC)
+	@ar rc $(NAME) $? $(OBJ)
+	@ranlib $(NAME)
+	@echo "\033[32mBuilt library.\033[0m"
+
 clean:
-	rm -f $(OBJECTS)
+	@/bin/rm -f $(OBJ)
+	@echo "\033[32mCleaned up object files.\033[0m"
+
 fclean: clean
-	rm -f $(NAME)
+	@/bin/rm $(NAME)
+	@echo "\033[32mCleaned up compiled files.\033[0m"
+
 re: fclean all
+
+.PHONY: all clean fclean re
