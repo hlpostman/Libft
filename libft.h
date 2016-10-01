@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/27 08:00:18 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 12:15:23 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
-# define IS_WHITESPACE(c) c == ' ' || c == '\n' || c == '\t'
+# include <unistd.h>
 # define TRIM(c) c == ' ' || c == '\n' || c == '\t'
 
 void	*ft_memset(void *b, int c, size_t len);
@@ -60,5 +60,15 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
