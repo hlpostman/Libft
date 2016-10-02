@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 19:40:11 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 20:06:01 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 size_t				ft_listlen(t_list *lst);
 size_t				ft_min(size_t a, size_t b);
 size_t				ft_max(size_t a, size_t b);
+int					ft_num_places(int num);
 
 #endif
