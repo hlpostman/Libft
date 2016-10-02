@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 19:26:31 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 19:40:11 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,7 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new_node);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 size_t				ft_listlen(t_list *lst);
+size_t				ft_min(size_t a, size_t b);
+size_t				ft_max(size_t a, size_t b);
 
 #endif
