@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 09:10:36 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/27 10:32:16 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 20:06:27 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,6 @@
 */
 
 #include "libft.h"
-
-int		ft_num_places(int num)
-{
-	int	places;
-
-	if (num == -2147483648)
-		return (11);
-	places = 0;
-	if (num == 0)
-		return (1);
-	if (num < 0)
-	{
-		num = -num;
-		return (ft_num_places(num));
-	}
-	while (num)
-	{
-		num /= 10;
-		places++;
-	}
-	return (places);
-}
 
 char	*ft_itoa(int n)
 {
@@ -68,5 +46,4 @@ char	*ft_itoa(int n)
 		n /= 10;
 	}
 	return (result);
-
 }
