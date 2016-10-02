@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 13:18:55 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 19:29:22 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 19:40:42 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,6 @@
 */
 
 #include "libft.h"
-
-static size_t	ft_min(size_t a, size_t b)
-{
-	if (a < b)
-		return (a);
-	return (b);
-}
-
-static size_t	ft_max(size_t a, size_t b)
-{
-	if (a > b)
-		return (a);
-	return (b);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
