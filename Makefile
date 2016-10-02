@@ -6,7 +6,7 @@
 #    By: hpostman <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 13:57:33 by hpostman          #+#    #+#              #
-#    Updated: 2016/10/01 22:20:52 by hpostman         ###   ########.fr        #
+#    Updated: 2016/10/01 22:25:34 by hpostman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,8 @@ SRC =	ft_atoi.c \
 		ft_itoa.c \
 		ft_put{char,str,endl,nbr}.c \
 		ft_put{char,str,endl,nbr}_fd.c \
-		ft_lst{map,new,delone,del,add,iter,len}.c \
+		ft_lst{map,new,delone,del,add,iter}.c \
+		ft_listlen.c \
 		ft_min.c \
 		ft_max.c \
 		ft_num_places.c \
