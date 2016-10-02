@@ -6,13 +6,13 @@
 #    By: hpostman <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 13:57:33 by hpostman          #+#    #+#              #
-#    Updated: 2016/10/01 22:25:34 by hpostman         ###   ########.fr        #
+#    Updated: 2016/10/02 14:27:15 by hpostman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRC =	ft_atoi.c \
 		ft_bzero.c \
