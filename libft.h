@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 20:43:16 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 21:18:12 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ size_t				ft_listlen(t_list *lst);
 size_t				ft_min(size_t a, size_t b);
 size_t				ft_max(size_t a, size_t b);
 int					ft_num_places(int num);
+void				ft_memrcpy(void *dst, const void *src, size_t n);
 
 #endif
