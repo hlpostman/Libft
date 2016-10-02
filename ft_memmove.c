@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 09:56:44 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/02 09:26:01 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 09:28:50 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@
 
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char       *buffer;
-    const unsigned char *source;
+	unsigned char		*buffer;
+	const unsigned char	*source;
 
-    buffer = dst;
-    source = src;
+	buffer = dst;
+	source = src;
 	if (dst < src)
 		return (ft_memcpy(dst, src, len));
 	return (ft_memrcpy(dst, src, len));
