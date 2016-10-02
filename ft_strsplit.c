@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 14:16:05 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/27 15:25:00 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 21:50:46 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,7 @@
 
 #include "libft.h"
 
-size_t	ft_count_delim(char const *s, char c)
-{
-	size_t	i;
-	size_t	count;
-
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**result;
 	size_t	num_words;
@@ -45,22 +31,26 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	end_str;
 	size_t	i;
 
-	num_words = 1 + ft_count_delim(s, c);
-	result = (char **)ft_memalloc(sizeof(char *) * (num_words + 1));
-	if (result == NULL)
-		return (NULL);
-	start_str = 0;
-	end_str = 0;
-	i = 0;
-	while (i < num_words)
+	if (s)
 	{
-		while (s[start_str] == c)
-			start_str++;
-		end_str = start_str;
-		while (s[end_str] != c)
-			end_str++;
-		result[i] = ft_strsub(s, start_str, (end_str - start_str) + 1);
-		i++;
+		num_words = ft_count_delim(s, c);
+		result = (char **)ft_memalloc(sizeof(char *) * (num_words + 1));
+		if (result == NULL)
+			return (NULL);
+		start_str = 0;
+		end_str = 0;
+		i = 0;
+		while (i < num_words)
+		{
+			while (s[start_str++] == c)
+				;
+			end_str = start_str;
+			while (s[end_str++] != c)
+				;
+			result[i] = ft_strsub(s, start_str - 1, (end_str - start_str - 1) + 1);
+			i++;
+		}
+		return (result);
 	}
-	return (result);
+	return (NULL);
 }
