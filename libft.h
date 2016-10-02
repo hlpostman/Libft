@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 21:54:16 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 22:32:15 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # define TRIM(c) c == ' ' || c == '\n' || c == '\t'
+# define ADDTL_WHITESPACE(c) c == '\v' || c == '\r' || c == '\f'
+# define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE)
 
 typedef struct		s_list
 {
@@ -87,7 +89,7 @@ size_t				ft_listlen(t_list *lst);
 size_t				ft_min(size_t a, size_t b);
 size_t				ft_max(size_t a, size_t b);
 int					ft_num_places(int num);
-void				ft_memrcpy(void *dst, const void *src, size_t n);
+void				*ft_memrcpy(void *dst, const void *src, size_t n);
 size_t				ft_count_delim(char const *s, char c);
 
 #endif
