@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 20:58:56 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 21:14:06 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 09:19:06 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@
 ** of source bytes to the destination is done from (n - 1) places out in
 ** source to the head of source, rather than from the head to (n - 1) places
 ** out. The bytes are copied into the corresponding index of the destination,
-** so the string is not reversed.  This all happens if and only if the
-** pointers passed as arguments are non-null.
+** so the string is not reversed.  It would be nice to have this  all happen
+** if and only if the pointers passed as arguments are non-null - putting the
+** while loop in a conditional such as "if (src && dst)". But the official
+** implementation seg faults if one of the pointers is NULL, and to be most
+** like the official implementation, I guess I can't protect the NULL case :(
 ** Return value: pointer to the front of the destination
 */
 
@@ -39,14 +42,11 @@ void	*ft_memrcpy(void *dst, const void *src, size_t n)
 	buffer = dst;
 	source = src;
 	i = (n - 1);
-	if (dst && src)
+	while (i > 0)
 	{
-		while (i > 0)
-		{
-			buffer[i] = source[i];
-			i--;
-		}
-		buffer[0] = source[0];
+		buffer[i] = source[i];
+		i--;
 	}
+	buffer[0] = source[0];
 	return (dst);
 }
