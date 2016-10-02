@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 22:32:15 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/01 22:34:42 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # define TRIM(c) c == ' ' || c == '\n' || c == '\t'
 # define ADDTL_WHITESPACE(c) c == '\v' || c == '\r' || c == '\f'
-# define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE)
+# define IS_WHITESPACE(c) (TRIM(c) || ADDTL_WHITESPACE(c))
 
 typedef struct		s_list
 {
