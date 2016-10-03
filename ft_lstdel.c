@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 17:53:00 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 18:11:37 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 20:28:44 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,12 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	if (alst && del)
 	{
 		current = *alst;
-		next = (*alst)->next;
-		while (current->next)
+		while (current)
 		{
+			next = current->next;
 			del(current->content, current->content_size);
 			free(current);
 			current = current->next;
-			if (current->next)
-				next = current->next;
 		}
 		*alst = NULL;
 	}
