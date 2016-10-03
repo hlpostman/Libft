@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 12:24:09 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 12:45:50 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 20:11:13 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*new_s;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	new_s = ft_strdup(s);
+	if (!new_s)
+		return (NULL);
 	i = 0;
 	while (new_s[i])
 	{
