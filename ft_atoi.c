@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 19:46:13 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 20:10:36 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 19:47:42 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,28 @@
 
 int	ft_atoi(const char *s)
 {
-	int	i;
-	int	j;
-	int	ans;
+	int		i;
+	int		j;
+	int		ans;
+	char	*input;
 
 	i = 0;
-	j = 0;
+	j = 1;
 	ans = 0;
-	while (IS_WHITESPACE(s[i]) && s[i] != '\0')
-		i++;
-	if (s[i] == '-' && ft_isdigit(s[i + 1]))
+	input = (char *)s;
+	while (IS_WHITESPACE(*input))
+		input++;
+	if (*input == '-' && ft_isdigit(*(input + 1)))
 	{
 		j = -1;
-		i++;
+		input++;
 	}
-	if (s[i] == '+' && ft_isdigit(s[i + 1]))
-		i++;
-	while (s[i] != '\0')
+	if (*input == '+' && ft_isdigit(*(input + 1)))
+		input++;
+	while (ft_isdigit(*input))
 	{
-		if (ft_isdigit(s[i]))
-			ans = ans * 10 + (s[i] - '0');
-		else
-			return (j * ans);
-		i++;
+		ans = ans * 10 + (*input - '0');
+		input++;
 	}
 	return (j * ans);
 }
