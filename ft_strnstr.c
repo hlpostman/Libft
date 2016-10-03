@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 19:18:50 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 19:31:14 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 17:17:58 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,19 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
+	size_t	checkto;
+	size_t	len_little;
 	size_t	i;
 
+	checkto = ft_min(ft_strlen(big) + 1, n);
+	len_little = ft_strlen(little);
 	i = 0;
-	if (ft_strlen(little) == 0)
-		return ((char *)big);
-	while ((big + i) != '\0')
+	if (!(unsigned char)little[0])
+		return (char *)(big);
+	while (i < checkto && len_little <= (n - i))
 	{
-		if (ft_memcmp((big + i), little, n) == 0)
-			return ((char *)(big + i));
+		if (ft_strncmp((big + i), little, len_little) == 0)
+			return (char *)(big + i);
 		i++;
 	}
 	return (NULL);
