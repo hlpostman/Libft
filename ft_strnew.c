@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 07:39:49 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 09:24:20 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 20:06:05 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size));
+	return ((char *)ft_memalloc(size + 1));
 }
