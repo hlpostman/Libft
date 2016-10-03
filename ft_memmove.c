@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 09:56:44 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/02 17:24:33 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/02 17:32:09 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	source = src;
 	if (dst < src)
 		return (ft_memcpy(dst, src, len));
+	if (dst == src || !len)
+		return (dst);
 	return (ft_memrcpy(dst, src, len));
 }
