@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 18:12:42 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 18:22:10 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/03 18:35:20 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@
 void	ft_lstadd(t_list **alst, t_list *new_node)
 {
 	if (alst && new_node)
-		new_node->next = *(alst);
+		new_node->next = *alst;
+		*alst = new_node;
 }
