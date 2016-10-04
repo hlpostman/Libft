@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 09:10:36 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/04 16:08:12 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 16:09:34 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	if (sign)
 		result[0] = '-';
-	result[num_places] = '\0';
+	result[num_places - 1 + sign] = '\0';
 	while (n)
 	{
 		num_places--;
