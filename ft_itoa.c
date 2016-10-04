@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 09:10:36 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/04 16:09:34 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 16:11:27 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	if (sign)
 		result[0] = '-';
 	result[num_places - 1 + sign] = '\0';
-	while (n)
+	while (num_places)
 	{
 		num_places--;
 		result[num_places] = (n % 10) + '0';
