@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 14:43:32 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/04 18:24:42 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:26:12 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s)
 	while (end >= start && TRIM(s[end]))
 		end--;
 	trimmed_len = (end - start) + 1;
-	trimmed = (char *)ft_memalloc(sizeof(size_t) * (trimmed_len + 1));
+	trimmed = (char *)ft_memalloc(sizeof(char) * (trimmed_len + 1));
 	if (trimmed == NULL)
 		return (NULL);
 	ft_strncpy(trimmed, (s + start), trimmed_len);
