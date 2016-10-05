@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 19:32:15 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/24 19:38:01 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 21:30:23 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	return (ft_memcmp(s1, s2, ft_strlen(s2)));
+	return (ft_memcmp(s1, s2, ft_strlen(s2) + 1));
 }
