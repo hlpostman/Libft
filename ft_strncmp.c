@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/24 19:39:12 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/02 15:41:14 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 23:57:16 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	if (ft_min(ft_strlen(s1), ft_strlen(s2)) < n)
 		n = ft_min(ft_strlen(s1), ft_strlen(s2)) + 1;
+	if (n == 0)
+		return (0);
 	return (ft_memcmp(s1, s2, n));
 }
