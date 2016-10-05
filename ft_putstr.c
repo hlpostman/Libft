@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 14:55:42 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/30 15:24:24 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:29:32 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	ft_putstr(char const *s)
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s && s[i] != '\0')
 		ft_putchar(s[i++]);
 }

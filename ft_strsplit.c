@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 14:16:05 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/01 22:15:45 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:28:20 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	end;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	num_words = ft_count_delim(s, c);
 	result = (char **)ft_memalloc(sizeof(char *) * (num_words + 1));
 	if (!s || result == NULL)

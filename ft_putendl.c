@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 15:28:22 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/30 15:30:58 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:32:02 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 ** Side effect: writes the string argument to standard out, followed by a
 ** newline
 ** Return value: none
+** If s is NULL, ft_putstr will do nothing (see ft_putstr which checks for if
+** the pointer passed to it is nul), but ft_putchar() will put the newline.
 */
 
 #include "libft.h"

@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 16:44:57 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/30 16:45:00 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:34:02 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 ** Note that if the argument passed for the file descriptor is invalid, the
 ** program crashes - write(2) fails, and putendl_fd() has no error handling.
 ** Return value: none
+** If s is nul, ft_putstr_fd() will do nothing (see implementation of the
+** ft_putstr_fd() function, which checks for if the pointer passed to it is
+** nul), and ft_putchar_fd() will go ahead and put the newline.
 */
 
 #include "libft.h"
