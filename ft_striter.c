@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 09:47:28 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 11:50:13 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:16:54 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,13 @@ void	ft_striter(char *s, void (*f)(char *))
 	size_t	len;
 
 	i = 0;
-	len = ft_strlen(s);
-	while (i < len)
+	if (s && f)
 	{
-		f((s + i));
-		i++;
+		len = ft_strlen(s);
+		while (i < len)
+		{
+			f((s + i));
+			i++;
+		}
 	}
 }

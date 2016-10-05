@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 14:43:32 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/27 07:59:48 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:24:42 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s)
 
 	trimmed_len = 0;
 	start = 0;
+	if (!s)
+		return (0);
 	end = ft_strlen(s) - 1;
 	while (s[start] && TRIM(s[start]))
 		start++;

@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 09:39:39 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 09:46:43 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:17:59 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_bzero((void *)s, ft_strlen(s));
+	if (s)
+		ft_bzero((void *)s, ft_strlen(s));
 }

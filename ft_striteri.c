@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 11:52:51 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 12:19:42 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:18:54 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t			len;
 
 	i = 0;
-	len = ft_strlen(s);
-	while (i < (unsigned int)len)
+	if (s && f)
 	{
-		f(i, (s + i));
-		i++;
+		len = ft_strlen(s);
+		while (i < (unsigned int)len)
+		{
+			f(i, (s + i));
+			i++;
+		}
 	}
 }

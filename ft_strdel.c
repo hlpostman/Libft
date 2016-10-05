@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 09:29:40 by hpostman          #+#    #+#             */
-/*   Updated: 2016/09/25 09:36:30 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 18:14:17 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void *)as);
+	if (as)
+		ft_memdel((void *)as);
 }
