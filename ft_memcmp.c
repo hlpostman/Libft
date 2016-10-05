@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 11:47:48 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/02 10:58:08 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/04 23:43:34 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	buffer2 = (unsigned char *)s2;
 	i = 0;
 	if (!buffer1[0] && buffer2[0])
-		return (-1);
+		return ((unsigned char)buffer1[0] - (unsigned char)buffer2[0]);
 	if (buffer1[0] && !buffer2[0])
-		return (1);
+		return ((unsigned char)buffer1[0] - (unsigned char)buffer2[0]);
 	while (i < n)
 	{
 		if ((unsigned char)buffer1[i] != (unsigned char)buffer2[i])
