@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:10:47 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/02 19:33:00 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/03 22:26:27 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ size_t				ft_max(size_t a, size_t b);
 int					ft_num_places(int num);
 void				*ft_memrcpy(void *dst, const void *src, size_t n);
 size_t				ft_count_delim(char const *s, char c);
+size_t				ft_iterative_power(size_t base, size_t exponent);
 
 #endif
