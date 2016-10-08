@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 14:18:00 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/04 18:24:01 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/08 14:02:17 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	space_needed = ft_strlen(s1) + ft_strlen(s2) + 1;
-	joined = (char *)ft_memalloc(space_needed);
+	joined = ft_strnew(space_needed);
 	if (joined == NULL)
 		return (NULL);
 	ft_strcpy(joined, s1);
