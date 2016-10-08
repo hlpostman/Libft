@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 13:51:24 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/02 20:20:13 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/08 16:16:26 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	new_sub = (char *)ft_memalloc(sizeof(char) * (len + 1));
 	if (new_sub == NULL)
 		return (NULL);
-	new_sub = (char *)ft_memcpy(new_sub, (const void *)(s + start), len);
+	new_sub = (char *)ft_memcpy(new_sub, (s + start), len);
 	return (new_sub);
 }

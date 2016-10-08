@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 14:43:32 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/04 18:26:12 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/08 16:21:08 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,24 +27,19 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	trimmed_len;
-	size_t	start;
-	size_t	end;
-	char	*trimmed;
+	unsigned int	i;
+	size_t			len;
+	char			*trimmed;
 
-	trimmed_len = 0;
-	start = 0;
 	if (!s)
 		return (0);
-	end = ft_strlen(s) - 1;
-	while (s[start] && TRIM(s[start]))
-		start++;
-	while (end >= start && TRIM(s[end]))
-		end--;
-	trimmed_len = (end - start) + 1;
-	trimmed = (char *)ft_memalloc(sizeof(char) * (trimmed_len + 1));
-	if (trimmed == NULL)
-		return (NULL);
-	ft_strncpy(trimmed, (s + start), trimmed_len);
-	return (trimmed);
+	i = 0;
+	while (TRIM(s[i]))
+		i++;
+	len = ft_strlen(s) - 1;
+	while (len > i && TRIM(s[len]))
+		len--;
+	if (len < i)
+		return (trimmed = ft_strdup(""));
+	return (trimmed = ft_strsub(s, i, len - (size_t)i + 1));
 }
