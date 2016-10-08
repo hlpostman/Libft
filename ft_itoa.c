@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 09:10:36 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/05 21:31:37 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/08 16:38:44 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,29 +23,27 @@
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		num_places;
-	int		sign;
+	char	*s;
+	size_t	len;
 
-	num_places = ft_num_places(n);
-	sign = 0;
-	if (n < 0)
-		sign = 1;
-	if (!(result = (char *)ft_memalloc(num_places + sign + 1)))
-		return (NULL);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (sign)
+	len = ft_num_places(n) + 1;
+	if (!(s = (char *)malloc(sizeof(char) * len)))
+		return (NULL);
+	if (n == 0)
+		s[0] = '0';
+	if (n < 0)
 	{
-		result[0] = '-';
+		s[0] = '-';
 		n = -n;
 	}
-	result[num_places + sign] = '\0';
-	while (num_places)
+	s[len - 1] = '\0';
+	while (n)
 	{
-		num_places--;
-		result[num_places + sign] = (n % 10) + '0';
+		len--;
+		s[len - 1] = (n % 10) + '0';
 		n /= 10;
 	}
-	return (result);
+	return (s);
 }

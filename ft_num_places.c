@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 20:02:06 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/03 22:47:17 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/08 16:39:59 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_num_places(int num)
 	if (num < 0)
 	{
 		num = -num;
-		return (ft_num_places(num));
+		places++;
 	}
 	while (num)
 	{

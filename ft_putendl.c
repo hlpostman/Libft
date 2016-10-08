@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 15:28:22 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/04 18:32:02 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/08 16:41:15 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }
