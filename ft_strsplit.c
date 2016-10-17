@@ -6,7 +6,7 @@
 /*   By: hpostman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/27 14:16:05 by hpostman          #+#    #+#             */
-/*   Updated: 2016/10/08 16:34:49 by hpostman         ###   ########.fr       */
+/*   Updated: 2016/10/17 13:40:37 by hpostman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_num_words(char const *s, char d)
 	size_t	i;
 
 	i = 0;
-		num_words = 0;
+	num_words = 0;
 	if (s[i] && (s[i] != d) && (s[i + 1] != d) && (s[i + 1] != 0))
 		num_words++;
 	while (s[i])
